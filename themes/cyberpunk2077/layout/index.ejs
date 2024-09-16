@@ -1,0 +1,19 @@
+
+<div class="page-container">
+  <div class="container">
+      <!-- must add if (page.posts) working -->
+      <% if(page.posts) { %> 
+          <% page.posts.each(function (post, index) { %>
+              <div class="post-card">
+                  <h2>
+                    <a href="<%- url_for(post.path) %>"><%= post.title %></a>
+                  </h2>
+                  
+              </div>
+              <% }) %>
+      <% } %>
+  </div>
+  <nav class="pagination">
+      <%- paginator({ prev_text: 'Previous' , next_text: 'Next' }) %>
+  </nav>
+</div>

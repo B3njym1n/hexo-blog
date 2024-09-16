@@ -1,0 +1,443 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #0f0f0f;
+  color: #e0e0e0;
+  margin: 0;
+  padding: 0;
+  /* height: 2000px; */
+  /* 模拟长页面 */
+  position: relative;
+  /* 使背景图成为相对定位 */
+  background-image: url('https://pic.imgdb.cn/item/66e7ed16d9c307b7e91f132c.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto 100%;
+  background-attachment: fixed;
+  color: #fff;
+  /* 文字颜色选择白色，以便于在黄昏背景下显示 */
+  font-family: Arial, sans-serif;
+  /* 添加渐变层 */
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7)),
+    url('https://pic.imgdb.cn/item/66e7ed16d9c307b7e91f132c.jpg') center / cover no-repeat;
+  transition: background-position 0.5s ease;
+  /* 原有的样式保持不变 */
+  min-width: 320px;
+  /* 设置一个最小宽度，适用于大多数移动设备 */
+  /* 其余样式保持不变 */
+}
+
+h1 {
+  text-align: center;
+  opacity: 0.8;
+}
+
+p {
+  /* 示例文本样式 */
+  /* text-align: center; */
+  opacity: 0.8;
+  /* 文本透明度，以适应明亮背景 */
+}
+
+header {
+  background-color: #1a1a1a;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  color: #ff007f;
+  font-size: 3em;
+}
+
+header p {
+  color: #ffcc00;
+}
+
+main {
+  padding: 20px;
+}
+
+.newest-post article,
+.posts-list article {
+  background-color: #1a1a1a;
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.newest-post article h2,
+.posts-list article h2 {
+  color: #ff007f;
+}
+
+.newest-post article p,
+.posts-list article p {
+  color: #e0e0e0;
+}
+
+.pagination {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.pagination a {
+  color: #ffcc00;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+footer {
+  background-color: #1a1a1a;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+footer p {
+  color: #e0e0e0;
+}
+
+.post {
+  background-color: #1a1a1a;
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.post h2 {
+  color: #ff007f;
+}
+
+.post-meta {
+  color: #ffcc00;
+  margin-bottom: 20px;
+}
+
+.post-content {
+  color: #e0e0e0;
+}
+
+.page,
+.archive {
+  background-color: #1a1a1a;
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.page h2,
+.archive h2 {
+  color: #ff007f;
+}
+
+.page-content,
+.archive article {
+  color: #e0e0e0;
+}
+
+.archive article h3 {
+  color: #ffcc00;
+}
+
+.archive article p {
+  color: #e0e0e0;
+}
+
+ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style-type: none;
+  margin-right: 20px;
+}
+
+/* Code Block Styling */
+pre {
+  background-color: #1a1a1a;
+  /* Dark background */
+  border: 1px solid #ff007f;
+  /* Cyberpunk pink border */
+  border-radius: 5px;
+  padding: 15px;
+  /* overflow: auto; */
+  color: #e0e0e0;
+  /* Light text color */
+}
+
+code {
+  background-color: #1a1a1a;
+  /* Dark background */
+  color: #ffcc00;
+  /* Cyberpunk yellow text */
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+/* Line Numbers */
+pre .line-numbers-rows {
+  border-right: 1px solid #ff007f;
+  /* Cyberpunk pink border */
+}
+
+pre .line-numbers-rows>span:before {
+  color: #ffcc00;
+  /* Cyberpunk yellow line numbers */
+}
+
+/* Copy Button */
+pre .copy-to-clipboard-button {
+  background-color: #ff007f;
+  /* Cyberpunk pink button */
+  color: #e0e0e0;
+  /* Light text color */
+  border: none;
+  border-radius: 3px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+pre .copy-to-clipboard-button:hover {
+  background-color: #ffcc00;
+  /* Cyberpunk yellow on hover */
+  color: #1a1a1a;
+  /* Dark text color */
+}
+
+.neon-text {
+  font-size: 48px;
+  color: #ff69b4;
+  /* 文本颜色 */
+  text-shadow:
+    0 0 5px #ff69b4,
+    0 0 10px #ff69b4,
+    0 0 15px #ff69b4,
+    0 0 20px #ff0080,
+    0 0 30px #ff0080,
+    0 0 40px #ff0080;
+  /* 霓虹光效 */
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+a.neon-button {
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  color: #ff69b4;
+  background-color: transparent;
+  font-size: 24px;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+a.neon-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 105, 180, 0.5), transparent);
+  transform: skewX(-45deg);
+  z-index: -1;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+a.neon-button:hover {
+  color: #fff;
+  box-shadow: 0 0 10px #ff69b4, 0 0 20px #ff69b4, 0 0 30px #ff69b4, 0 0 40px #ff69b4;
+}
+
+a.neon-button:hover::before {
+  left: 150%;
+}
+
+.page-container {
+  display: flex;
+  /* 使用 Flexbox 布局 */
+  flex-direction: column;
+  /* 子元素垂直排列 */
+  height: 78vh;
+  /* 容器高度为视口高度 */
+  padding: 0 20px;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 144px;
+  flex-grow: 1;
+  /* 内容区自动扩展 */
+  overflow-y: auto;
+  /* 内容超出时显示滚动条 */
+}
+
+.page-container ol {
+  text-align: center;
+  list-style-position: inside; /* 将列表项标记放置在列表内部，使其与内容对齐更美观 */
+  padding: 0; /* 去除默认的内边距 */
+}
+nav.pagination {
+  padding: 10px 20px;
+  /* 内边距 */
+  text-align: center;
+  /* 文字居中 */
+  flex-shrink: 0;
+  /* 不允许缩小 */
+  order: 1;
+  /* 放置在内容下方 */
+}
+
+.pagination {
+  /* 固定高度的分页区 */
+  /* background-color: #f8f9fa; 示例背景颜色 */
+  padding: 10px 20px;
+  /* 内边距 */
+  text-align: center;
+  /* 文字居中 */
+}
+
+nav.nav-menu {
+  display: flex;
+  /* 使用 Flexbox 布局 */
+  justify-content: center;
+  /* 水平居中 */
+  align-items: center;
+  /* 垂直居中（如果需要） */
+  height: 60px;
+  /* 为演示设置一个固定高度 */
+  background-color: #333;
+  /* 背景色 */
+}
+
+.menu {
+  list-style-type: none;
+  /* 移除默认的列表样式 */
+  padding: 0;
+  /* 移除默认的内边距 */
+  margin: 0;
+  /* 移除默认的外边距 */
+}
+
+.menu li {
+  display: inline-block;
+  /* 让列表项在同一行显示 */
+  color: white;
+  /* 文字颜色 */
+  padding: 0 20px;
+  /* 左右内边距 */
+}
+
+@media (max-width: 768px) {
+
+  .newest-post article,
+  .posts-list article,
+  .post,
+  .page,
+  .archive {
+    padding: 10px;
+    /* 减少内边距 */
+  }
+
+  .newest-post article h2,
+  .posts-list article h2,
+  .post h2,
+  .page h2,
+  .archive h2 {
+    font-size: 1.5em;
+    /* 减小标题字体大小 */
+  }
+
+  header h1 {
+    font-size: 2em;
+    /* 减小页眉标题字体大小 */
+  }
+
+  .pagination a,
+  footer p,
+  .post-meta {
+    font-size: 0.8em;
+    /* 减小其他文本字体大小 */
+  }
+
+  /* 如果有导航栏或者侧边栏，可以考虑隐藏或者折叠 */
+  nav,
+  aside {
+    display: none;
+    /* 或者使用其他方式折叠 */
+  }
+
+  /* 调整代码块在小屏幕上的显示 */
+  pre {
+    font-size: 0.8em;
+    /* 减小代码字体大小 */
+  }
+
+  /* 确保按钮在小屏幕上也足够大 */
+  a.neon-button {
+    font-size: 1.5em;
+    padding: 8px 16px;
+  }
+}
+
+img,
+video,
+iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  body {
+    background-size: cover;
+  }
+}
+
+.post-card {
+  /* 任何其他的样式... */
+  display: flex;          /* 使用 Flexbox 布局 */
+  flex-direction: column; /* 子元素垂直排列 */
+  justify-content: center; /* 垂直居中对齐 */
+  /* align-items: center;    水平居中对齐 */
+  margin: 2em 2em;
+}
+
+.post-card > * {
+  /* 如果所有直接子元素都需要居中 */
+  margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #FF69B4;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+}
+
+
+p {
+  color: #C0C0C0;
+  line-height: 1.6;
+}
+
+a {
+  color: #00FFFF;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #FFD700;
+}
