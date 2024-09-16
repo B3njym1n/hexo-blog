@@ -1,7 +1,14 @@
 ---
 title: PrivateBin
 date: 2024-09-12 12:38:41
-tags: Software
+tags:
+  - Docker
+  - Software
+categories:
+  - Linux
+  - Software
+  - Self Hosting
+  
 ---
 
 # Table of Contents

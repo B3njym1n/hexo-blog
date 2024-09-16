@@ -278,8 +278,8 @@ a.neon-button:hover::before {
 
 .container {
   display: flex;
-  flex-direction: column;
-  gap: 144px;
+  flex-direction: row;
+  gap: 20px;
   flex-grow: 1;
   /* 内容区自动扩展 */
   overflow-y: auto;
@@ -440,4 +440,70 @@ a {
 
 a:hover {
   color: #FFD700;
+}
+
+#tags-and-categories {
+  flex: 0 0 20%; /* 固定宽度，占据容器的25% */
+  margin-top: 20px;
+  text-align: center;
+}
+
+#tags-and-categories h2 {
+  color: #FF69B4;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+}
+
+#tags-and-categories ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex; /* 使用 Flexbox 布局 */
+  flex-wrap: wrap; /* 允许在必要时换行 */
+  justify-content: center; /* 水平居中对齐 */
+}
+
+#tags-and-categories li {
+  display: flex; /* 使用 Flexbox 布局 */
+  align-items: center; /* 垂直居中对齐 */
+  margin: 5px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #333;
+  border: 1px solid #ffcc00;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  white-space: nowrap; /* 强制文本不换行 */
+  word-break: break-all; /* 断开长单词 */
+  max-width: 100%; /* 最大宽度为父元素的100% */
+  overflow: hidden; /* 超出部分隐藏 */
+  text-overflow: ellipsis; /* 显示省略号 */
+}
+
+#tags-and-categories a {
+  color: #00FFFF;
+  text-decoration: none;
+}
+
+#tags-and-categories li:hover {
+  background-color: #ffcc00;
+  color: #1a1a1a;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+.container > main {
+  flex: 1; /* 主要内容占据剩余空间 */
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* 在窄屏设备上垂直排列 */
+  }
+
+  #tags-and-categories {
+    flex: 0 0 100%; /* 占据整个宽度 */
+    margin-top: 20px;
+  }
+
+  .container > main {
+    flex: 1; /* 主要内容占据剩余空间 */
+  }
 }

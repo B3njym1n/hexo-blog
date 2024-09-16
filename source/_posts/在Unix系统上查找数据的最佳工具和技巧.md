@@ -2,6 +2,10 @@
 title: 在Unix系统上查找数据的最佳工具和技巧
 date: 2024-09-12 13:41:57
 tags:
+  - Linux
+categories:
+  - Linux
+  
 ---
 
 

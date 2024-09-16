@@ -2,6 +2,12 @@
 title: MySQL修改root密码
 date: 2024-09-12 13:43:38
 tags:
+  - Linux
+  - MySQL
+categories:
+  - Linux
+  - MySQL
+  - DataBase
 ---
 
 

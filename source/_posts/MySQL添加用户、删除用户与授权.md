@@ -2,6 +2,12 @@
 title: MySQL添加用户、删除用户与授权
 date: 2024-09-12 14:27:02
 tags:
+  - Linux
+  - MySQL
+categories:
+  - Linux
+  - MySQL
+  - DataBase
 ---
 
 

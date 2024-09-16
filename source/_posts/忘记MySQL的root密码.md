@@ -2,6 +2,12 @@
 title: 忘记MySQL的root密码
 date: 2024-09-12 13:19:07
 tags:
+  - Linux
+  - MySQL
+categories:
+  - Linux
+  - MySQL
+  - DataBase
 ---
 
 

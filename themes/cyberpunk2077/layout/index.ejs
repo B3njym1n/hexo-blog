@@ -1,19 +1,41 @@
-
 <div class="page-container">
   <div class="container">
+    <main>
       <!-- must add if (page.posts) working -->
-      <% if(page.posts) { %> 
-          <% page.posts.each(function (post, index) { %>
-              <div class="post-card">
-                  <h2>
-                    <a href="<%- url_for(post.path) %>"><%= post.title %></a>
-                  </h2>
-                  
-              </div>
-              <% }) %>
+      <% if(page.posts) { %>
+        <% page.posts.each(function (post, index) { %>
+          <div class="post-card">
+            <h2>
+              <a href="<%- url_for(post.path) %>">
+                <%= post.title %>
+              </a>
+            </h2>
+
+          </div>
+          <% }) %>
       <% } %>
+    </main>
+    <aside id="tags-and-categories">
+      <h2>Categories</h2>
+      <!-- <%- list_categories(site.categories) %> -->
+      <ul id="categories-list">
+      <% if(site.categories) { %>
+        <% site.categories.each(function (category, index) { %>
+          <li><a href="<%- url_for(category.path) %>"><%= category.name %></a></li>
+        <% }) %>
+      <% } %>
+      </ul>
+      <h2>Tags</h2>
+      <ul id="tags-list">
+        <% if(site.tags) { %>
+          <% site.tags.each(function (tag, index) { %>
+            <li><a href="<%- url_for(tag.path) %>"><%= tag.name %></a></li>
+          <% }) %>
+        <% } %>
+      </ul>
+    </aside>
   </div>
   <nav class="pagination">
-      <%- paginator({ prev_text: 'Previous' , next_text: 'Next' }) %>
+    <%- paginator({ prev_text: 'Previous' , next_text: 'Next' }) %>
   </nav>
 </div>
