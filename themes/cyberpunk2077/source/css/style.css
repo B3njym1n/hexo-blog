@@ -288,9 +288,12 @@ a.neon-button:hover::before {
 
 .page-container ol {
   text-align: center;
-  list-style-position: inside; /* 将列表项标记放置在列表内部，使其与内容对齐更美观 */
-  padding: 0; /* 去除默认的内边距 */
+  list-style-position: inside;
+  /* 将列表项标记放置在列表内部，使其与内容对齐更美观 */
+  padding: 0;
+  /* 去除默认的内边距 */
 }
+
 nav.pagination {
   padding: 10px 20px;
   /* 内边距 */
@@ -409,19 +412,27 @@ iframe {
 
 .post-card {
   /* 任何其他的样式... */
-  display: flex;          /* 使用 Flexbox 布局 */
-  flex-direction: column; /* 子元素垂直排列 */
-  justify-content: center; /* 垂直居中对齐 */
+  display: flex;
+  /* 使用 Flexbox 布局 */
+  flex-direction: column;
+  /* 子元素垂直排列 */
+  justify-content: center;
+  /* 垂直居中对齐 */
   /* align-items: center;    水平居中对齐 */
   margin: 2em 2em;
 }
 
-.post-card > * {
+.post-card>* {
   /* 如果所有直接子元素都需要居中 */
   margin: 0 auto;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: #FF69B4;
   text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
 }
@@ -443,7 +454,8 @@ a:hover {
 }
 
 #tags-and-categories {
-  flex: 0 0 20%; /* 固定宽度，占据容器的25% */
+  flex: 0 0 20%;
+  /* 固定宽度，占据容器的25% */
   margin-top: 20px;
   text-align: center;
 }
@@ -457,25 +469,35 @@ a:hover {
   list-style-type: none;
   padding: 0;
   margin: 0;
-  display: flex; /* 使用 Flexbox 布局 */
-  flex-wrap: wrap; /* 允许在必要时换行 */
-  justify-content: center; /* 水平居中对齐 */
+  display: flex;
+  /* 使用 Flexbox 布局 */
+  flex-wrap: wrap;
+  /* 允许在必要时换行 */
+  justify-content: center;
+  /* 水平居中对齐 */
 }
 
 #tags-and-categories li {
-  display: flex; /* 使用 Flexbox 布局 */
-  align-items: center; /* 垂直居中对齐 */
+  display: flex;
+  /* 使用 Flexbox 布局 */
+  align-items: center;
+  /* 垂直居中对齐 */
   margin: 5px;
   padding: 10px;
   border-radius: 5px;
   background-color: #333;
   border: 1px solid #ffcc00;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  white-space: nowrap; /* 强制文本不换行 */
-  word-break: break-all; /* 断开长单词 */
-  max-width: 100%; /* 最大宽度为父元素的100% */
-  overflow: hidden; /* 超出部分隐藏 */
-  text-overflow: ellipsis; /* 显示省略号 */
+  white-space: nowrap;
+  /* 强制文本不换行 */
+  word-break: break-all;
+  /* 断开长单词 */
+  max-width: 100%;
+  /* 最大宽度为父元素的100% */
+  overflow: hidden;
+  /* 超出部分隐藏 */
+  text-overflow: ellipsis;
+  /* 显示省略号 */
 }
 
 #tags-and-categories a {
@@ -488,23 +510,28 @@ a:hover {
   color: #1a1a1a;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
-.container > main {
-  flex: 1; /* 主要内容占据剩余空间 */
+
+.container>main {
+  flex: 1;
+  /* 主要内容占据剩余空间 */
 }
 
 /* 响应式设计 */
 @media (max-width: 768px) {
   .container {
-    flex-direction: column; /* 在窄屏设备上垂直排列 */
+    flex-direction: column;
+    /* 在窄屏设备上垂直排列 */
   }
 
   #tags-and-categories {
-    flex: 0 0 100%; /* 占据整个宽度 */
+    flex: 0 0 100%;
+    /* 占据整个宽度 */
     margin-top: 20px;
   }
 
-  .container > main {
-    flex: 1; /* 主要内容占据剩余空间 */
+  .container>main {
+    flex: 1;
+    /* 主要内容占据剩余空间 */
   }
 }
 
@@ -517,6 +544,12 @@ a:hover {
   border-radius: 10px;
   overflow: hidden;
   margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
 }
 
 /* 年份分组 */
