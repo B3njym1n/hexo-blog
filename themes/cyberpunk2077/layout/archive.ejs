@@ -1,0 +1,36 @@
+<div class="page-container">
+    <div class="container">
+        <main>
+            <section id="archives">
+                <ul id="archive-list">
+                    <li class="year-group">
+
+                    <% var groupTag=0; page.posts.each(function (item) { var itemTag=is_month() ?
+                        date(item.date, 'YYYY/MM' ) : is_year() ? date(item.date, 'YYYY/MM' ) : date(item.date, 'YYYY'
+                        ); %>
+                        <% if(groupTag !==itemTag){ %>
+
+                            <% if(is_month()) { %>
+                                <a href="<%= config.root + 'archives/' + date(item.date, 'YYYY') %>" class="year-link"><%= date(item.date, 'YYYY' ) %></a> / <%= date(item.date, 'MM' ) %>
+                                    <% } else { %>
+                                        <a href="<%= config.root + 'archives/' + itemTag %>" class="year-link">
+                                            <%= is_month() ? date(item.date, 'YYYY/MM' ) : is_year() ?
+                                                date(item.date, 'YYYY / MM' ) : date(item.date, 'YYYY' ) %>
+                                        </a>
+                                    <% } %>
+
+                            <% } %>
+                                <li class="post-item">
+                                    <time datetime="<%= item.date %>" pubdate><%= date(item.date, "YYYY-MM-DD" ) %></time>
+                                    <a href="<%= config.root + item.path %>"><%= item.title %></a>            
+                                </li>
+                    <% groupTag=groupTag !==itemTag ? itemTag : groupTag; }); %>
+                    </li>
+                </ul>
+            </section>
+        </main>
+    </div>
+    <nav class="pagination">
+        <%- paginator({ prev_text: 'Previous' , next_text: 'Next' }) %>
+    </nav>
+</div>

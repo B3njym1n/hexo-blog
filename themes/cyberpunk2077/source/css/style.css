@@ -507,3 +507,78 @@ a:hover {
     flex: 1; /* 主要内容占据剩余空间 */
   }
 }
+
+/* 归档列表 */
+#archive-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  background-color: #1a1a1a;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+/* 年份分组 */
+#archive-list .year-group {
+  padding: 10px;
+  border-bottom: 1px solid #333;
+  transition: background-color 0.3s ease;
+}
+
+#archive-list .year-group:last-child {
+  border-bottom: none;
+}
+
+#archive-list .year-group:hover {
+  background-color: #333;
+}
+
+#archive-list .year-link {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #ff007f;
+  padding-left: 10px;
+}
+
+/* 列表项 */
+#archive-list .post-item {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  margin-bottom: 10px;
+}
+
+#archive-list .post-item:last-child {
+  margin-bottom: 0;
+}
+
+#archive-list .post-item time {
+  display: inline-block;
+  margin-right: 10px;
+  color: #ffcc00;
+  font-size: 0.8em;
+}
+
+#archive-list .post-item a {
+  color: #e0e0e0;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+#archive-list .post-item a:hover {
+  color: #ffcc00;
+  text-decoration: underline;
+}
+
+/* 媒体查询 */
+@media (max-width: 768px) {
+  #archive-list .year-group {
+    padding: 8px;
+  }
+
+  #archive-list .post-item time {
+    font-size: 0.7em;
+  }
+}
